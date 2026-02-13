@@ -1,0 +1,20 @@
+{
+  "Industrial_and_Scientific_train": {
+    "file_name": "Industrial_and_Scientific/sft/train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "Industrial_and_Scientific_valid": {
+    "file_name": "Industrial_and_Scientific/sft/valid.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  }
+}

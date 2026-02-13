@@ -1,0 +1,16 @@
+compute_environment: LOCAL_MACHINE
+distributed_type: DEEPSPEED
+num_machines: 1
+# num_processes: 8
+mixed_precision: bf16
+
+deepspeed_config:
+  zero_stage: 2
+  contiguous_gradients: true
+  overlap_comm: true
+  reduce_scatter: true
+  reduce_bucket_size: 5e8
+  allgather_bucket_size: 5e8
+  offload_optimizer_device: cpu
+  offload_param_device: none
+debug: false

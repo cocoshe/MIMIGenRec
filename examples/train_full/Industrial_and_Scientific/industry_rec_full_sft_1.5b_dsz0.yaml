@@ -1,0 +1,50 @@
+### model
+model_name_or_path: Qwen/Qwen2.5-1.5B-Instruct
+trust_remote_code: true
+add_tokens_list: 'data/Industrial_and_Scientific/new_tokens.json'
+### method
+stage: sft
+do_train: true
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z0_config.json
+
+### dataset
+dataset: Industrial_and_Scientific_train
+cutoff_len: 512
+preprocessing_num_workers: 16
+dataloader_num_workers: 4
+
+### output
+output_dir: saves/qwen2.5-1.5b/full/Industrial_and_Scientific-sft-dsz0
+logging_steps: 1
+save_steps: 0.05
+plot_loss: true
+overwrite_output_dir: true
+save_only_model: false
+save_strategy: steps
+load_best_model_at_end: true
+save_total_limit: 1
+### experiment
+report_to: wandb
+run_name: Industrial_and_Scientific-qwen2.5-1.5b-sft-dsz0
+
+### train
+per_device_train_batch_size: 32
+gradient_accumulation_steps: 8
+learning_rate: 3.0e-4
+num_train_epochs: 10.0
+lr_scheduler_type: cosine
+
+warmup_steps: 20
+bf16: true
+ddp_timeout: 180000000
+resume_from_checkpoint: null
+early_stopping_steps: 3
+metric_for_best_model: loss
+
+
+### eval
+eval_dataset: Industrial_and_Scientific_valid
+per_device_eval_batch_size: 32
+eval_strategy: steps
+eval_steps: 0.05
