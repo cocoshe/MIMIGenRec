@@ -111,37 +111,3 @@ def main(
 
 if __name__ == "__main__":
     fire.Fire(main)
-
-
-# from datasets import load_dataset
-# from trl import GRPOTrainer
-
-# dataset = load_dataset("trl-lib/tldr", split="train")
-
-# # Dummy reward function: count the number of unique characters in the completions
-# def reward_num_unique_chars(completions, **kwargs):
-#     return [len(set(c)) for c in completions]
-
-# from trl.trainer.grpo_config import GRPOConfig
-# args = GRPOConfig(
-#     output_dir="rl_outputs/Qwen2.5-0.5B-Instruct-grpo",
-#     per_device_train_batch_size=2,
-#     per_device_eval_batch_size=2,
-#     num_train_epochs=1,
-#     learning_rate=5e-6,
-#     logging_steps=10,
-#     num_generations=2,
-#     top_k=50,
-#     top_p=1.0,
-#     max_completion_length=128,
-# )
-# from transformers import AutoModelForCausalLM
-# model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
-
-# trainer = GRPOTrainer(
-#     model=model,
-#     reward_funcs=reward_num_unique_chars,
-#     train_dataset=dataset,
-#     args=args,
-# )
-# trainer.train()

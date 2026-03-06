@@ -1,7 +1,11 @@
 set -e
 
 export DATA_DIR="data/Amazon18"
+
 export CATEGORY="Industrial_and_Scientific"
+# export CATEGORY="Office_Products"
+# export CATEGORY="Toys_and_Games"
+
 # output directory (sft/, rl/, new_tokens.json); default data/<category>
 export OUTPUT_DIR="data/${CATEGORY}"
 

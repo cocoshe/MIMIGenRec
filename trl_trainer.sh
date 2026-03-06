@@ -1,19 +1,28 @@
 set -e
 
 export CATEGORY="Industrial_and_Scientific"
+# export CATEGORY="Office_Products"
+# export CATEGORY="Toys_and_Games"
 
 # export MODEL_PATH="saves/qwen2.5-1.5b/full/${CATEGORY}-sft-dsz2"
 export MODEL_PATH="saves/qwen2.5-0.5b/full/${CATEGORY}-sft-dsz0"
+
 export DATA_DIR="data/${CATEGORY}/rl"
 export INDEX_PATH="data/${CATEGORY}/id2sid.json"
+
 # export OUTPUT_DIR="rl_outputs/${CATEGORY}-qwen2.5-1.5b-instruct-grpo"
 export OUTPUT_DIR="rl_outputs/${CATEGORY}-qwen2.5-0.5b-instruct-grpo"
+# export OUTPUT_DIR="rl_outputs/${CATEGORY}-qwen2.5-3b-instruct-grpo"
 
 # wandb
 export WANDB_PROJECT="MIMIGenRec-GRPO"
 # export WANDB_RUN_NAME="${CATEGORY}-qwen2.5-1.5b-instruct"
 export WANDB_RUN_NAME="${CATEGORY}-qwen2.5-0.5b-instruct"
+# export WANDB_RUN_NAME="${CATEGORY}-qwen2.5-3b-instruct"
+
 export WANDB_MODE=offline  # set to "online" to use wandb
+# export WANDB_MODE=online
+
 export WANDB_API_KEY=""
 export REPORT_TO="wandb"
 
@@ -23,6 +32,7 @@ export SAVE_TOTAL_LIMIT=1
 NUM_PROCESSES=8
 MAIN_PORT=29503
 ds_config=config/zero2.yaml
+# ds_config=config/zero3.yaml
 
 # rollout
 export NUM_BEAMS=16

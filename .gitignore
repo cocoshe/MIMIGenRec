@@ -181,7 +181,11 @@ wandb/
 swanlog/
 generated_predictions.jsonl
 predictions_score.json
-results/
-rl_outputs/
+results*/
+rl_outputs*/
 .history/
 temp/
+data/Toys_and_Games_5.json
+data/Amazon18
+data/meta_Toys_and_Games.json
+data/peek_samples.py

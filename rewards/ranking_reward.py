@@ -3,6 +3,23 @@ import math
 from util import _extract_number
 
 
+def partial_hit_rule_reward(prompts, completions, completion_ids, **reward_kwargs):
+    data_source, ability, reward_model, extra_info, trainer_state = reward_kwargs.values()
+    rewards = []
+    for i, completion in enumerate(completions):
+        gt_num = _extract_number(reward_model[i]["ground_truth"])
+        completion_num = _extract_number(completion[0]["content"])
+        if completion_num == gt_num:
+            rewards.append(100.0)
+        elif completion_num[:2] == gt_num[:2]:
+            rewards.append(10.0)
+        elif completion_num[:1] == gt_num[:1]:
+            rewards.append(1.0)
+        else:
+            rewards.append(0.0)
+    return rewards
+
+
 def rule_reward(prompts, completions, completion_ids, **reward_kwargs):
     data_source, ability, reward_model, extra_info, trainer_state = reward_kwargs.values()
     rewards = []
