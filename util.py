@@ -57,3 +57,8 @@ def build_constrained_logits_processor(
 
 def _extract_number(text: str) -> list[int]:
     return [int(m) for m in re.findall(r"_(\d+)", text)]
+
+
+def _extract_all_tuples(text: str) -> list[tuple[int, int, int]]:
+    """Extract all (a, b, c) tuples from text in <a_N><b_N><c_N> format."""
+    return [(int(a), int(b), int(c)) for a, b, c in re.findall(r"<a_(\d+)><b_(\d+)><c_(\d+)>", text)]
