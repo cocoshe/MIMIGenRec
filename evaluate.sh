@@ -1,15 +1,23 @@
 set -e
 
 CATEGORY="Industrial_and_Scientific"
+# CATEGORY="Office_Products"
+# CATEGORY="Toys_and_Games"
 
 # sft
-exp_name="saves/qwen2.5-0.5b/full/${CATEGORY}-sft-dsz0/checkpoint-120"
+exp_name="saves/qwen2.5-0.5b/full/${CATEGORY}-sft-dsz0"
 # exp_name="saves/qwen2.5-1.5b/full/${CATEGORY}-sft-dsz2"
 
-# rl
-# exp_name="rl_outputs/${CATEGORY}-qwen2.5-0.5b-instruct-grpo/checkpoint-1155"
-# exp_name="rl_outputs/${CATEGORY}-qwen2.5-1.5b-instruct-grpo/checkpoint-1155"
+# Industrial and Scientific rl
+# exp_name="rl_outputs/${CATEGORY}-qwen2.5-0.5b-instruct-grpo/checkpoint-1648"
+#### exp_name="rl_outputs/${CATEGORY}-qwen2.5-1.5b-instruct-grpo/checkpoint-1155"
 
+# office products rl
+# exp_name="rl_outputs/${CATEGORY}-qwen2.5-0.5b-instruct-grpo/checkpoint-1726"
+
+# toys and games rl
+# exp_name="rl_outputs/${CATEGORY}-qwen2.5-0.5b-instruct-grpo/checkpoint-1430"
+# exp_name="rl_outputs/${CATEGORY}-qwen2.5-1.5b-instruct-grpo/checkpoint-1430"
 
 # multi-GPU config
 cuda_list="0 1 2 3 4 5 6 7"  # 8 GPUs
