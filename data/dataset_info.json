@@ -16,5 +16,41 @@
       "response": "output",
       "system": "system"
     }
+  },
+  "Office_Products_train": {
+    "file_name": "Office_Products/sft/train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "Office_Products_valid": {
+    "file_name": "Office_Products/sft/valid.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "Toys_and_Games_train": {
+    "file_name": "Toys_and_Games/sft/train.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
+  },
+  "Toys_and_Games_valid": {
+    "file_name": "Toys_and_Games/sft/valid.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output",
+      "system": "system"
+    }
   }
 }
