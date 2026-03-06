@@ -96,6 +96,10 @@ Then we got:
 
 Please follow "Encode item text to embeddings" in [MiniOneRec](https://github.com/AkaliKong/MiniOneRec#2-data-preparation):
 
+```
+bash rq/text2emb/amazon_text2emb.sh
+```
+
 Then we got:
 
 - `Industrial_and_Scientific.emb-qwen-td.npy`
@@ -104,6 +108,15 @@ Then we got:
 
 Please follow 3.1, 3.2 of "SID Construction" in [MiniOneRec](https://github.com/AkaliKong/MiniOneRec#3-sid-construction)
 to generate indices.
+
+
+```
+bash rq/rqvae.sh
+```
+
+```
+bash rq/generate_indices.sh
+```
 
 Then we got:
 
@@ -324,8 +337,25 @@ llamafactory-cli train PATH_TO_YOUR_YAML.yaml
 
 (or use `bash sft.sh` after uncommenting the corresponding line).
 
+## More experiments (`GRU4Rec`, `Caser`, `SASRec`)
+
+Run `GRU4Rec`
+```bash
+bash scripts/rec_zoo/train_gru.sh --data_dir data/Industrial_and_Scientific
+```
+
+Run `Caser`
+```bash
+bash scripts/rec_zoo/train_caser.sh --data_dir data/Industrial_and_Scientific
+```
+
+Run `SASRec`
+```bash
+bash scripts/rec_zoo/train_sasrec.sh --data_dir data/Industrial_and_Scientific
+```
+
 ## Citation & acknowledgments
 
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) — SFT training framework  
 - [TRL](https://github.com/huggingface/trl) — Reinforcement learning training
-- [MiniOneRec](https://github.com/AkaliKong/MiniOneRec) -  First fully open-source generative recommendation framework
+- [MiniOneRec](https://github.com/AkaliKong/MiniOneRec) - First fully open-source generative recommendation framework
