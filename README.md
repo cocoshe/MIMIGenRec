@@ -7,15 +7,17 @@
 
 <p align="center">
   <a href="https://wandb.ai/cocoshe/MIMIGenRec-public/workspace?nw=nwusercocoshe">
-    <img src="./assets/wandb-github-badge-gradient.svg" alt="Visualize in Weights & Biases" width="120" />
+    <img src="./assets/wandb-github-badge-gradient.svg" alt="Visualize in Weights & Biases" width="120" /></a><a href="https://huggingface.co/collections/cocoshe/mimigenrec">
+    <img src="./assets/model-on-hf-md-dark.svg" alt="Model in Hugging Face" width="94" />
   </a>
 </p>
+
 
 **MIMIGenRec** (Modular, Integrated, Mutable, Interchangeable GenRec) is a flexible training framework for **generative recommendation** models.
 
 **<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />Updates**
 
-2026-03-06 — Release wandb logs to ensure reproducibility. Migrating rq code and embedding code from MiniOneRec, give more example datasets and scripts, now it support to preprocess and build the datasets in this single repository. Support traditional models to reproduce(GRU4Rec, Caser, SASRec), metrics are well saved as tsv files.
+2026-03-06 — Release wandb logs to ensure reproducibility. Migrating rq code and embedding code from MiniOneRec, give more example datasets and scripts, now it support to preprocess and build the datasets in this single repository. Support traditional models to reproduce(GRU4Rec, Caser, SASRec), metrics are well saved as
 
 2026-02-18 — MIMIGenRec code released, including SFT and RL training on handcrafted datasets.
 
