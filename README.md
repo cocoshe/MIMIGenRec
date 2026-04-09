@@ -17,6 +17,8 @@
 
 **<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />Updates**
 
+2026-04-09 — Release evaluation results on datasets.
+
 2026-03-06 — Release wandb logs to ensure reproducibility. Migrating rq code and embedding code from MiniOneRec, give more example datasets and scripts, now it support to preprocess and build the datasets in this single repository. Support traditional models to reproduce(GRU4Rec, Caser, SASRec), metrics are well saved as
 
 2026-02-18 — MIMIGenRec code released, including SFT and RL training on handcrafted datasets.
@@ -26,6 +28,16 @@
 - **LlamaFactory integration**: SFT and LoRA for a wide range of custom models via simple YAML configs; support for backends such as [Unsloth](https://github.com/unslothai/unsloth); built-in experiment monitors (e.g. WandB) for logging and comparison.
 - **TRL integration**: Tight integration with [TRL](https://github.com/huggingface/trl) and the Hugging Face ecosystem; multi-GPU and multi-node training with [Accelerate](https://github.com/huggingface/accelerate), flexible [DeepSpeed](https://github.com/microsoft/DeepSpeed) configs (ZeRO-2/3, etc.), and easy to design custom rewards (e.g. NDCG, HR) for policy optimization.
 - **Flexible Trie design**: Constrained decoding over SIDs via a Trie, which is flexible to build constrained logits processor for beam search when rollout.
+
+## Evaluation results
+
+<img width="2402" height="420" alt="image" src="https://github.com/user-attachments/assets/ddc8bcd1-5ae3-429c-9ddf-f3c8833bfc26" />
+
+<img width="2368" height="406" alt="image" src="https://github.com/user-attachments/assets/980bfcd8-b59b-44e7-96d3-e7d1600431b9" />
+
+<img width="2376" height="504" alt="image" src="https://github.com/user-attachments/assets/fe8ba90a-5300-4ae3-b766-580e31f5d95f" />
+
+
 
 ## Overview
 
